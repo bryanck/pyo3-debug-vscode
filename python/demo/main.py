@@ -25,4 +25,4 @@ from demo import sum_as_string
 # ----------------------------------------------------------------------------
 
 value = sum_as_string(1, 2)
-print(f"1 + 1 = {value}")
+print(f"1 + 2 = {value}")
