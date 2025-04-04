@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Debug Script",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "stopOnEntry": true,
+      "presentation": {
+        "hidden": true,
+      },
+    },
+    {
+      "name": "Python: Debug Test",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["-v", "${file}"],
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "stopOnEntry": true,
+      "presentation": {
+        "hidden": true,
+      },
+    },
+    {
+      "name": "LLDB: Attach",
+      "type": "lldb",
+      "request": "attach",
+      "program": "${workspaceFolder}/.venv/bin/python",
+      "preLaunchTask": "Build Rust Extension",
+      "waitFor": true,
+      "presentation": {
+        "hidden": true,
+      },
+    },
+  ],
+  "compounds": [
+    {
+      "name": "Debug Script",
+      "configurations": [
+        "Python: Debug Script",
+        "LLDB: Attach"
+      ],
+      "preLaunchTask": "Build Rust Extension",
+    },
+    {
+      "name": "Debug Test",
+      "configurations": [
+        "Python: Debug Test",
+        "LLDB: Attach"
+      ],
+      "preLaunchTask": "Build Rust Extension",
+    }
+  ]
+}
