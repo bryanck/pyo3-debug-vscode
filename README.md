@@ -48,7 +48,7 @@ There are two launch configurations:
 
 __MIT License__
 
-Copyright (c) 2025 Martin Donath <martin.donath@squidfunk.com>
+Copyright (c) 2025 Martin Donath
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
